@@ -1,0 +1,232 @@
+////////////////////////////////////////////////////////////
+// atam  - Tema para Moodle 3.1
+//
+
+
+// Verde atam 
+//      rgb: 0,116,130
+//      hsl 186, 100, 25.5
+//      hex: #007482
+
+
+
+
+@verdeAtam:             hsl(186,100%,25%); 
+@green:                 @verdeAtam;
+
+@linkColor:             @green;
+@linkColorHover:        lighten(@linkColor,20%); 
+
+@actividad-bg:          #CAE0E5;
+@foro-bg:               #E6FFEB;
+
+@navbarInverseBackground:                @green;
+@navbarInverseBackgroundHighlight:       @green;
+@navbarInverseBorder:                    @green;
+@navbarInverseText:                      @white;
+@navbarInverseLinkColor:                 @white;
+@navbarInverseLinkColorHover:            @linkColorHover;
+@navbarInverseLinkColorActive:           @navbarInverseLinkColorHover;
+
+@navbarHeight: 60px;
+
+
+@sansFontFamily: "Ruda", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@serifFontFamily: "Bitter",Georgia, "Times New Roman", Times, serif;
+@headingsFontFamily: @sansFontFamily; // empty to use BS default, @baseFontFamily
+@headingsColor: @green; // empty to use BS default, @textColor
+
+// moodle fixes / core overrides
+body{
+    padding-top: 80px !important;
+}
+.block{
+    box-shadow: none;
+    border-color:  transparent;
+}
+.singlebutton{
+ .form div, input{
+     margin:0px;
+     }
+}
+// NavBar
+.navbar-inner{
+    min-height: 60px;
+}
+
+img.small-logo{
+    height: 40px !important;
+    margin: 20px 0 !important;
+}
+.textmenu, {
+    padding: 10px 0 !important;
+}
+.dir-ltr .usermenu{
+    padding: 10px 0 !important;
+}
+.navbar .nav{
+    margin: 10px 0;
+}
+.notloggedin{
+     .navbar .nav{
+         display:none;
+     }
+}
+.no-overflow,
+.breadcrumb li,
+input[type="text"],
+textarea,
+span,
+p{
+    font-family: @serifFontFamily;
+}
+label{
+    font-weight:900;
+    color: #555;
+}   
+input[type="radio"],
+input[type="checkbox"]{
+    margin-top:-2px;
+}
+    
+//LogIn
+.loginbox .loginform .form-label{
+    text-align:center;
+    width:100%;
+}
+
+.loginbox .loginform .form-input{
+    text-align:center;
+    width:100%;
+}
+.signuppanel .subcontent .text_to_html{
+    margin:0 30px;
+}
+// HOME
+// Side Dock  
+#dock .dockedtitle{
+    background-image: none;
+    border-radius: 0;
+    padding:0px;
+    margin:0px;
+    text-shadow:0px;
+    h2{
+        padding:0 4px;
+    }
+}
+.course-1.pagelayout-frontpage{
+    .left.picture{
+        display:none;
+    }
+    .topic.firstpost.starter{
+        margin-left:0px;
+    }
+    .forumpost{
+        .left{
+            display:none
+        }
+    }
+
+}
+    .coursebox .content .no-overflow{
+        margin:0 10px;
+    }
+// Forum
+.forumpost{
+    padding:10px;
+    border:transparent;
+    box-shadow:none;
+}
+// Course Content
+// arrelgo margenes izquierdos
+
+#notice,
+.coursebox .content .summary, 
+.coursebox .content .coursecat{
+    width:100%;
+}
+// Secciones
+
+.course-content ul.topics li.section .content, 
+.course-content ul.weeks li.section .content{
+    margin: 0;
+    padding: 0;
+}
+.jsenabled .course-content ul.topics li.section .left{
+    position:absolute;
+}
+.jsenabled .course-content ul.topics li.section .right {
+    position: relative;
+}
+.course-content .section.current{
+    background: #f5f5f5;
+}
+.course-content ul.topics li.section .summary {
+    margin-left: 0px;
+}
+// Collapsable
+.course-content ul.ctopics li.tcsection.main,
+.course-content ul.ctopics li.tcsection{
+    float:right;
+    margin:0px ;
+    h4, .content{
+        padding:0px;
+    }
+    .off{
+        padding-right:0px;
+    }
+    .side{
+        display:none;
+    }
+}
+.course-content ul.ctopics li.section .content .toggle a, 
+#toggle-all .content h4 a{
+    margin:0px;
+}
+.ctoics .section left.side,
+.course-content ul.ctopics li.section.main .left{
+
+    display:none;
+}
+.course-content ul.ctopics li.section .content .toggle,
+.course-content ul.ctopics li.section .content.sectionhidden{
+    background-color:transparent !important;
+}
+.course-content ul.ctopics li.section.main .content, 
+.course-content ul.ctopics li.tcsection .content {
+    margin: 0;
+    padding: 0 20px;
+}
+
+.course-content ul.ctopics li.section .content .toggle a, 
+.course-content ul.ctopics li.section .content.sectionhidden {
+    color: @green !important;
+}
+
+//actividaes
+
+ul.section.img-text{
+    margin: 0px;
+    padding : 0px;
+    li{
+        background: #f5f5f5; 
+        margin: 10px 0px !important;
+        padding: 10px !important;
+        &.activity{
+          background:  @actividad-bg;
+        }
+        &.activity.forum{
+             background: @foro-bg;
+        }
+    }
+}
+// Footer    
+#page-footer {
+    .iconhelp.icon-pre{
+        display:none;
+    }
+    img{
+        max-width:150px;
+        margin:20px auto;
+    }
+}
