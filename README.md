@@ -1,9 +1,9 @@
 atam - Tema para Moodle 3.1 
 ===============================================
-moodle build:2016051900
+*build:2016051900*
 
-Basado en 'Clean' 
-depende de "bootrsapbase" (Bootstrap 2.3)
+* Basado en 'Clean' 
+* depende de "bootrsapbase" (Bootstrap 2.3)
 
 Instrucciones para instalar
 
@@ -15,6 +15,9 @@ cd ../bootstrapbase
 npm install
 ```
 
-Generar CSS (bootsrap 2.3)
-` grunt css`
+Generar CSS
+
+```bash
+grunt css
+```
 
