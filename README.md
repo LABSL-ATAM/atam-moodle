@@ -1,5 +1,7 @@
-atam - Tema para Moodle 3.1 (buiild:2016051900)
+atam - Tema para Moodle 3.1 
 ===============================================
+moodle build:2016051900
+
 Basado en 'Clean' 
 depende de "bootrsapbase" (Bootstrap 2.3)
 
